@@ -1,5 +1,5 @@
-context('DWP API test - witout loading the page', () => {
-    it('cy.request() with query parameters', () => {
+context('DWP API test', () => {
+    it('Test - Using API call witout loading the page', () => {
         cy.request("http://bpdts-test-app-v2.herokuapp.com/instructions")
             .then((response) => {
                 // response validation
@@ -34,7 +34,7 @@ context('DWP API test - witout loading the page', () => {
             })
     })
 
-    it('DWP API test - Using page and page elements', () => {
+    it('Test - Using page and page elements', () => {
         cy.visit('http://bpdts-test-app-v2.herokuapp.com/')
         cy.get('#operations-tag-default').click()
 
